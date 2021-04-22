@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo-app
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-app
+  namespace: kube-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+  destination:
+    namespace: demo-app
+    server: https://kubernetes.default.svc
+  project: apps
+  source:
+    path: .
+    repoURL: https://github.com/atoy3731/hello-world-manifests.git
+    targetRevision: master
+    helm:
+      values: |
+        replicaCount: 5
+
+        ingress:
+          annotations:
+            cert-manager.io/cluster-issuer: demo-issuer
+            traefik.ingress.kubernetes.io/redirect-entry-point: https
+          hosts:
+            - host: app.demo.atoy.dev
+          tls:
+            - secretName: demo-app-tls
+              hosts:
+                - app.demo.atoy.dev
