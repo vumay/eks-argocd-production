@@ -1,4 +1,4 @@
 apiVersion: v1
 description: Production environment
-name: devops-toolkit
+name: gitops-argocd
 version: "0.1.0"
