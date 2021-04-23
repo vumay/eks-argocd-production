@@ -23,8 +23,8 @@ spec:
           annotations:
             cert-manager.io/cluster-issuer: letsencrypt-staging
           hosts:
-            - host: vumay-app.ddns.net
+            - host: apps-vumay.ddns.net
           tls:
             - secretName: demo-app-tls
               hosts:
-                - vumay-app.ddns.net
+                - apps-vumay.ddns.net
