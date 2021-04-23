@@ -16,7 +16,7 @@ spec:
   source:
     path: helm
     repoURL: https://github.com/vumay/eks-argocd-production.git
-    targetRevision: master
+    targetRevision: HEAD
     helm:
       values: |
         ingress:
