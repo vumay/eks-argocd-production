@@ -10,7 +10,7 @@ spec:
     automated:
       prune: true
   destination:
-    namespace: prodution
+    namespace: production
     server: https://kubernetes.default.svc
   project: production
   source:
