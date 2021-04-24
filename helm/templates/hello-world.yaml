@@ -16,7 +16,7 @@ spec:
   source:
     path: helm
     repoURL: https://github.com/vumay/hello-world-manifests.git
-    targetRevision: master
+    targetRevision: HEAD
     helm:
       values: |
         ingress:
