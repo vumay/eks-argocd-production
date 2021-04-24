@@ -14,7 +14,7 @@ spec:
     server: https://kubernetes.default.svc
   project: production
   source:
-    path: helm
+    path: .
     repoURL: https://github.com/vumay/hello-world-manifests.git
     targetRevision: HEAD
     helm:
