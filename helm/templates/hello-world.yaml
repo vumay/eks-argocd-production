@@ -16,7 +16,7 @@ spec:
   source:
     path: helloworld
     repoURL: https://github.com/stakater-charts/helloworld.git
-    targetRevision: HEAD
+    targetRevision: master
     helm:
       values: |
         ingress:
