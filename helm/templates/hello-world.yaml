@@ -15,7 +15,7 @@ spec:
   project: production
   source:
     path: .
-    repoURL: https://github.com/vumay/hello-world-manifests.git
+    repoURL: https://github.com/stakater-charts/helloworld.git
     targetRevision: HEAD
     helm:
       values: |
