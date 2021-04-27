@@ -18,7 +18,7 @@ spec:
   project: production
   source:
     path: .
-    repoURL: https://github.com/vumay/hello-world-manifests.git
+    repoURL: https://github.com/atoy3731/hello-world-manifests.git
     targetRevision: HEAD
     helm:
       values: |
