@@ -14,7 +14,7 @@ spec:
     server: https://kubernetes.default.svc
   project: production
   source:
-    path: .
+    path: helloworld
     repoURL: https://github.com/stakater-charts/helloworld.git
     targetRevision: HEAD
     helm:
