@@ -15,9 +15,9 @@ spec:
     automated:
       prune: true
   destination:
-    namespace: production
+    namespace: demo-app
     server: https://kubernetes.default.svc
-  project: demo-app
+  project: production
   source:
     path: .
     repoURL: https://github.com/vumay/hello-world-manifests.git
